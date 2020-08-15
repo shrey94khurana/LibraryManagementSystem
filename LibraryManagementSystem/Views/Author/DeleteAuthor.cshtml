@@ -1,0 +1,16 @@
+﻿@model LibraryManagementSystem.Models.AuthorModel
+<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Scripts/bootstrap.js")" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@Model.AuthorId<br />
+@Model.AuthorName<br />
+@Model.AuthorDesc<br />
+
+<form action="~/Author/DeleteAuthor/@Model.AuthorId" method="post">
+    <input type="submit" value="Delete" />
+</form>

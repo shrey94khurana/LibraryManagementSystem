@@ -1,0 +1,16 @@
+﻿<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Scripts/bootstrap.js")" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form action="~/Author/CreateAuthor" method="post">
+    <label>Author Name</label>
+    <input type="text" id="txtname" name="AuthorName" class="form-control" /><br />
+    <label>Author Description</label>
+    <input type="text" id="txtdesc" name="AuthorDesc" class="form-control" /><br />
+    <input type="submit" value="create" class="btn btn-success" />
+</form>
+

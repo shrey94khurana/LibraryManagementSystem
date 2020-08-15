@@ -1,0 +1,18 @@
+﻿@model LibraryManagementSystem.Models.AuthorModel
+<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Scripts/bootstrap.js")" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form action="~/Author/EditAuthor" method="post">
+    <input type="hidden" name="AuthorId" value="@Model.AuthorId" />
+    <label>Aurthor Name</label>
+    <input type="text" id="txtname" name="AuthorName" value="@Model.AuthorName" class="form-control" /><br />
+    <label>Author Description</label>
+    <input type="text" id="txtdescription" name="AuthorDesc" value="@Model.AuthorDesc" class="form-control" /><br />
+    <input type="submit" value="Save" class="btn btn-success" />
+</form>
+
