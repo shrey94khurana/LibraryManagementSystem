@@ -1,0 +1,51 @@
+﻿@model LibraryManagementSystem.Models.Books
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+
+
+
+<form action="~/Admin/Edit" method="post">
+    <input type="hidden" name="BookId" value="@Model.BookId" />
+    <label>BookName</label>
+    <input type="text" id="txtname" name="BookName" value="@Model.BookName" class="form-control" /><br />
+    <label>Description</label>
+    <input type="text" id="txtdes" name="Description" value="@Model.Description" class="form-control" /><br />
+
+    <label>Cost</label>
+    <input type="text" id="txtcost" name="Cost" value="@Model.Cost" class="form-control" /><br />
+
+    <label>Category</label>
+    <input type="text" id="txtcategory" name="Category" value="@Model.Category" class="form-control" /><br />
+
+    <label>AuthorId</label>
+    <input type="text" id="txtauthid" name="AuthorId" value="@Model.AuthorId" class="form-control" /><br />
+
+    <label>PublishDate</label>
+    <input type="text" id="txtpublishdate" name="PublishDate" value="@Model.PublishDate" class="form-control" /><br />
+
+
+    <label>Quantity</label>
+    <input type="text" id="txtquantity" name="Quantity" value="@Model.Quantity" class="form-control" /><br />
+
+    <label>isbookavailable</label>
+    <input type="text" id="txtisbookavailable" name="isbookvaialable" value="@Model.isbookavailable" class="form-control" /><br />
+
+    <label>CreatedDate</label>
+    <input type="text" id="txtcreateddate" name="CreatedDate" value="@Model.CreatedDate" class="form-control" /><br />
+    <label>ModifiedBy</label>
+    <input type="text" id="txtModifiedBy" name="ModifiedBy" value="@Model.ModifiedBy" class="form-control" /><br />
+    <label>ModifiedDate</label>
+    <input type="text" id="txtModifiedDate" name="ModifiedDate" value="@Model.ModifiedDate" class="form-control" /><br />
+    <label>CreatedBy</label>
+    <input type="text" id="txtCreatedBy" name="CreatedBy" value="@Model.CreatedBy" class="form-control" /><br />
+
+
+
+    <input type="submit" value="Save" class="btn btn-success" />
+</form>
+
+

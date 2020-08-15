@@ -12,6 +12,11 @@ namespace LibraryManagementSystem.Controllers
         AuthorContext db = new AuthorContext();
 
         // GET: Author
+        [Authorize]
+        public ActionResult Index()
+        {
+            return View();
+        }
 
         public ActionResult IndexAuthor()
         {

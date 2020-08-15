@@ -1,0 +1,36 @@
+﻿@model LibraryManagementSystem.Models.Books
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<h2>Create</h2>
+
+<form action="~/Admin/Create" method="post">
+    <label>BookName</label>
+    <input type="text" id="txtname" name="BookName" class="form-control" /><br />
+
+    <label>Description</label>
+    <input type="text" id="txtdes" name="Description" class="form-control" /><br />
+
+    <label>Cost</label>
+    <input type="text" id="txtcost" name="Cost" class="form-control" /><br />
+
+    <label>Category</label>
+    <input type="text" id="txtcategory" name="Category" class="form-control" /><br />
+
+    <label>AuthorId</label>
+    <input type="text" id="txtauthid" name="AuthorId" class="form-control" /><br />
+
+    <label>PublishDate</label>
+    <input type="date" id="txtpublishdate" name="PublishDate" class="form-control" /><br />
+
+
+    <label>Quantity</label>
+    <input type="text" id="txtquantity" name="Quantity" class="form-control" /><br />
+
+    <label>isbookavailable</label>
+    <input type="text" id="txtisbookavailable" name="isbookavailable" class="form-control" /><br />
+    <input type="submit" value="create" class="btn btn-success" />
+</form>

@@ -1,0 +1,66 @@
+﻿@model List<LibraryManagementSystem.Models.Books> 
+@{
+    ViewBag.Title = "View_details";
+    Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+}
+
+<h2>View Books</h2>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+
+</head>
+<body>
+
+    @Html.ActionLink("Create","Create")
+    <table class="table table-responsive">
+
+        <tr>
+            <th>BookName</th>
+            <th>Category</th>
+            <th>AutherName</th>
+            <th>Image</th>
+            <th>PublishDate</th>
+            <th>Action</th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @item.BookName
+
+        </td>
+        <td>
+            @item.Category
+
+        </td>
+        <td>
+            @item.AuthorName
+
+        </td>
+        <td>
+    
+<img src="~/image/download.jpg" width="85" height="90"/>
+</td>
+        <td>
+            @item.PublishDate
+
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = @item.BookId },new {@class="btn-primary" })
+            @Html.ActionLink("Detail", "Detail", new { id = @item.BookId }, new { @class = "btn-success" })
+            @Html.ActionLink("Delete", "Delete", new { id = @item.BookId }, new { @class = "btn-warning" })
+        </td>
+
+    </tr>
+        }
+    </table>
+
+</body>
+</html>
+
+
+

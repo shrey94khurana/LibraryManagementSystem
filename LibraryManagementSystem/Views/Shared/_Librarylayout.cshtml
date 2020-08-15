@@ -1,11 +1,12 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Library Management</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -19,17 +20,29 @@
 
         /* Set gray background color and 100% height */
         .sidenav {
-            background-color: #f1f1f1;
+            background-color: cadetblue;
             height: 100%;
         }
 
         /* Set black background color, white text and some padding */
         footer {
-            background-color: #555;
+            background-color: darkolivegreen;
             color: white;
             padding: 15px;
         }
 
+        header {
+            background-color: darkolivegreen;
+            color: white;
+            padding: 15px;
+        }
+
+        .ph {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 50px;
+            font-family: 'Bookman Old Style';
+        }
         /* On small screens, set height to 'auto' for sidenav and grid */
         @@media screen and (max-width: 767px) {
             .sidenav {
@@ -44,24 +57,25 @@
     </style>
 </head>
 <body>
-
+    <header class="container-fluid">
+        <p class="ph">Library Management system</p>
+    </header>
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3 sidenav">
-                <h4>John's Blog</h4>
+
                 <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#section1">Home</a></li>
-                    <li><a href="#section2">Friends</a></li>
-                    <li><a href="#section3">Family</a></li>
-                    <li><a href="#section3">Photos</a></li>
+                    <li class="active"><a href="~/Admin/Home">Home</a></li>
+                    <li><a href="~/Admin/View_details">ViewBooks</a></li>
+                    <li><a href="~/Admin/Create">AddBook</a></li>
+                    <li><a href="~/Admin/Edit">EditBook</a></li>
+                    <li><a href="~/Admin/Delete">DeleteBook</a></li>
+                    <li><a href="~/Admin/About">About</a></li>
+                    <li><a href="~/Admin/ContactUs">ConatctUs</a></li>
                 </ul><br>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Blog..">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
+
+
                 </div>
             </div>
 
@@ -73,7 +87,7 @@
 
 
     <footer class="container-fluid">
-        <p>Footer Text</p>
+        <p>copyright  2020</p>
     </footer>
 
 </body>
